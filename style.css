@@ -1,0 +1,167 @@
+:root {
+  --bg-color: #121212;
+  --container-bg: #1e1e1e;
+  --display-bg: #2a2a2a;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --btn-op: #ff9800; /* Digital Native Orange Accent */
+  --border-radius: 8px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 3 / 4;
+  background-color: var(--container-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #111;
+}
+
+#about-trigger {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--btn-op);
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--text-muted);
+  color: var(--text-main);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Vertical Stack Layout */
+.translate-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+
+.lang-block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.lang-select {
+  background-color: var(--display-bg);
+  color: var(--text-main);
+  border: 1px solid #444;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  outline: none;
+}
+
+.text-box {
+  background-color: var(--display-bg);
+  color: var(--text-main);
+  border: none;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  font-size: 1.2rem;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.text-box::placeholder {
+  color: var(--text-muted);
+}
+
+.output-box {
+  color: var(--text-muted);
+  overflow-y: auto;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.translate-action {
+  background-color: var(--btn-op);
+  padding: 12px;
+  font-weight: bold;
+}
+
+.copy-action {
+  background-color: #333;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.close-btn {
+  background-color: #333;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Modal (Standardized) */
+.modal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background-color: var(--container-bg);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 75%;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content h2 { margin: 0; }
+.modal-link { color: var(--btn-op); text-decoration: none; font-weight: bold; font-size: 1.1rem;}
