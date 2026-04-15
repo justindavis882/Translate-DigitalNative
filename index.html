@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Translate | Digital Native</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    
+    <header class="app-header">
+      <span class="brand-small" id="about-trigger">DN</span>
+      <button id="swap-btn" class="icon-btn">⇅ Swap</button>
+    </header>
+
+    <div class="translate-stack">
+      
+      <div class="lang-block">
+        <select id="lang-from" class="lang-select"></select>
+        <textarea id="text-input" class="text-box" placeholder="Enter text..." rows="3"></textarea>
+      </div>
+
+      <button id="translate-btn" class="btn translate-action">Translate</button>
+
+      <div class="lang-block output-block">
+        <select id="lang-to" class="lang-select"></select>
+        <div id="text-output" class="text-box output-box">Translation will appear here...</div>
+        <button id="copy-btn" class="btn copy-action">Copy</button>
+      </div>
+
+    </div>
+
+    <div id="about-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Translate | Digital Native</h2>
+        <p>A fast, API-driven translator for minimalist displays.</p>
+        <a href="https://justindavis882.github.io/DigitalNative" target="_blank" class="modal-link">Visit Digital Native</a>
+        <button id="close-modal" class="btn close-btn">Close</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
